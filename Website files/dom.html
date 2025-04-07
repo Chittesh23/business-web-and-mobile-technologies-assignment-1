@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,14 +11,26 @@
 </head>
 <body>
   <nav class="navbar"> <!-- same navbar here --> </nav>
-
+  <body class="dark-theme">
+    <header>
+      <h1>Chittesh's Website</h1>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rps.html">RPS</a></li>
+          <li><a href="dom.html"class="active">DOM</a></li>
+          <li><a href="api.html">API</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
   <main>
     <h2>DOM Manipulation</h2>
     <button id="add-box">Add Box</button>
     <div id="container"></div>
   </main>
 
-  <footer><p>&copy; 2025 MySite. All rights reserved.</p></footer>
+  <footer><p>&copy; 2025 Chittesh. All rights reserved.</p></footer>
   <script src="js/dom.js"></script>
 </body>
 </html>
