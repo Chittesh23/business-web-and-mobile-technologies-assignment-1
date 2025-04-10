@@ -7,31 +7,41 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
+
 <body>
+  <!-- Header -->
   <header>
     <h1>Chittesh's Website</h1>
   </header>
+
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="nav-brand">Chittesh</div>
     <input type="checkbox" id="menu-toggle" />
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
-  <nav class="navbar">
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="rps.html">RPS</a></li>
       <li><a href="dom.html">DOM</a></li>
-      <li><a href="api.html">API</a></li>
+      <li><a href="api.html" class="active">API</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  
-  
 
+  <!-- Main Content -->
   <main>
     <h2>Random Quote Generator</h2>
-    <button onclick="getQuote()">Get Quote</button>
-    <p id="quote"></p>
+    <button id="getQuoteBtn">Get Quote</button>
+    <p id="quote">Click the button to get a quote...</p>
+  </main>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Chittesh's Website. All rights reserved.</p>
+  </footer>
 
-  <footer><p>&copy; 2025 MySite. All rights reserved.</p></footer>
+  <!-- JavaScript -->
   <script src="js/api.js"></script>
+</body>
+</html>
