@@ -42,6 +42,53 @@ body::before {
 }
 
 
+.about-me {
+  flex: 1;
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #0ff;
+  text-shadow: 1px 1px 3px #ff0000, -1px -1px 3px #00ffff;
+}
+
+.about-me h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px dashed #0ff;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.about-me p {
+  font-size: 0.6rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: auto;
+  color: #fefefe;
+  text-shadow: none;
+}
+
+.signature {
+  margin-top: 2rem;
+  font-size: 0.5rem;
+  font-style: italic;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+}
+
+/* Responsive font sizing */
+@media (max-width: 600px) {
+  .about-me p {
+    font-size: 0.55rem;
+  }
+  .signature {
+    font-size: 0.45rem;
+  }
+}
+
  
   
 /* ===== RESET ===== */
@@ -119,7 +166,7 @@ button {
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 10px;
-  cursor: pointer;
+  cursor: crosshair;
   transition: 0.3s ease;
   box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
 }
@@ -207,9 +254,9 @@ header h1 {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 20px;
 }
 
 .nav li a {
@@ -268,6 +315,7 @@ footer {
 
 /* HEADER + LOGO */
 header {
+  position: relative;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.85);
   padding: 1rem 1rem 0 1rem;
@@ -352,8 +400,132 @@ footer {
   #menu-toggle:checked + .menu-icon + .nav-links {
     display: flex;
   }
-
+  header {
+    /* Add some margin to the header to create some space */
+    margin-bottom: 20px;
+  }
+  
   .menu-icon {
     display: block;
   }
-}}
+/* === SIDEBAR === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: #00ffff;
+  padding: 1rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  z-index: 100;
+  border-right: 2px dashed #0ff;
+}
+
+.sidebar h3, .sidebar h4 {
+  color: #fff;
+  text-shadow: 1px 1px 3px red, -1px -1px 2px cyan;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 1rem;
+  color: #0ff;
+}
+body {
+  background-color: black;
+  color: #0ff;
+  font-family: 'Press Start 2P', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+}
+
+.layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #111;
+  padding: 1rem;
+  border-right: 2px dashed #0ff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: #222;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: #0ff;
+  color: black;
+}
+
+/* Main section */
+main {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Text display */
+#words {
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+  min-height: 80px;
+}
+
+
+
+}
+/* Music Player Style */
+.music-player audio {
+  width: 100%;
+  filter: drop-shadow(0 0 5px #0ff);
+}
+
+/* === PUSH PAGE CONTENT TO THE RIGHT === */
+main, header, footer {
+  margin-left: 220px;
+
+.glitch {
+  position: relative;
+  color: #0ff;
+  text-shadow:
+    2px 0 red,
+    -2px 0 blue;
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 blue; transform: translate(0, 0); }
+  20% { text-shadow: -2px 0 red, 2px 0 blue; transform: translate(-1px, 1px); }
+  40% { text-shadow: 2px 0 red, -2px 0 blue; transform: translate(1px, -1px); }
+  60% { text-shadow: -1px 0 red, 1px 0 blue; transform: translate(0, 2px); }
+  80% { text-shadow: 2px 0 red, -2px 0 blue; transform: translate(-2px, 1px); }
+  100% { text-shadow: 2px 0 red, -2px 0 blue; transform: translate(0, 0); }
+
+}}}

@@ -1,36 +1,73 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DOM Manipulation</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+ class="dark-theme">
+  <header>
+    <h1>Chittesh's Website</h1>
+  </header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rps.html">RPS</a></li>
+        <li><a href="dom.html" class="active">DOM</a></li>
+        <li><a href="api.html">API</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flatland Interactive</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar"> <!-- same navbar here --> </nav>
-  <body class="dark-theme">
-    <header>
-      <h1>Chittesh's Website</h1>
-      <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="rps.html">RPS</a></li>
-          <li><a href="dom.html"class="active">DOM</a></li>
-          <li><a href="api.html">API</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-  <main>
-    <h2>DOM Manipulation</h2>
-    <button id="add-box">Add Box</button>
-    <div id="container"></div>
-  </main>
 
-  <footer><p>&copy; 2025 Chittesh. All rights reserved.</p></footer>
-  <script src="js/dom.js"></script>
+  
+
+  <div class="layout">
+    <!-- Sidebar steps -->
+    <aside class="sidebar">
+      <h2>💾 Mission Steps</h2>
+      <ul id="steps">
+        <li data-step="1">Step 1: Structure</li>
+        <li data-step="2">Step 2: Click</li>
+        <li data-step="3">Step 3: Hover</li>
+        <li data-step="4">Step 4: Function</li>
+        <li data-step="5">Step 5: Event Listeners</li>
+        <li data-step="6">Step 6: Onload Greeting</li>
+        <li data-step="7">Step 7: Remove Inline</li>
+        <li data-step="8">Step 8: External Script</li>
+      </ul>
+    </aside>
+
+    <!-- Main area -->
+    <main>
+      <div id="words">Welcome to Flatland. Click a step to begin.</div>
+      <div id="square">■</div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Chittesh</p>
+  </footer>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dom.css">
+  
+  <script src="dom.js"></script>
 </body>
 </html>
